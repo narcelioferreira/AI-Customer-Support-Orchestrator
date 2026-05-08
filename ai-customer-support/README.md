@@ -8,7 +8,7 @@ Sistema inteligente de atendimento B2B que classifica automaticamente solicitaç
 
 ## 🚀 Demo Rápido
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app.streamlit.app)
+[![Streamlit App](https://ai-customer-support-orchestrator-lq2achxetekhhwm9wnjflt.streamlit.app/dashboard)
 
 ---
 
