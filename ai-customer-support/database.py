@@ -3,7 +3,14 @@ import os
 import uuid
 from datetime import datetime, timedelta
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "data", "orchestrator.db")
+# Tenta criar na pasta /data local; cai para /tmp no Streamlit Cloud
+_base = os.path.dirname(os.path.abspath(__file__))
+_data_dir = os.path.join(_base, "data")
+try:
+    os.makedirs(_data_dir, exist_ok=True)
+    DB_PATH = os.path.join(_data_dir, "orchestrator.db")
+except OSError:
+    DB_PATH = "/tmp/orchestrator.db"
 
 SLA_HOURS = {"urgente": 2, "alta": 8, "media": 24, "baixa": 48}
 
